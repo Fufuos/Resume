@@ -573,7 +573,7 @@
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{\@homepage}{\faAlt{homepage: \@homepage}{\faHouseChimney}{\@homepage}}%
+          \href{https://www.\@homepage}{\faAlt{homepage: \@homepage}{\faHouseChimney}{\@homepage}}%
         }%
       \ifthenelse{\isundefined{\@github}}%
         {}%
