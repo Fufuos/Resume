@@ -18,9 +18,9 @@ AUTHOR     := $(if $(FIRST_NAME),$(FIRST_NAME)_$(LAST_NAME),Awesome)
 all: resume coverletter
 
 resume: | $(BUILD_DIR)
-	$(CC) -output-directory=$(BUILD_DIR) -jobname=$(AUTHOR)_CV src/main.tex
-	$(CC) -output-directory=$(BUILD_DIR) -jobname=$(AUTHOR)_CV src/main.tex
-	@echo "  -> $(BUILD_DIR)/$(AUTHOR)_CV.pdf"
+	$(CC) -output-directory=$(BUILD_DIR) -jobname=$(AUTHOR)_Resume src/main.tex
+	$(CC) -output-directory=$(BUILD_DIR) -jobname=$(AUTHOR)_Resume src/main.tex
+	@echo "  -> $(BUILD_DIR)/$(AUTHOR)_Resume.pdf"
 
 coverletter: | $(BUILD_DIR)
 	$(CC) -output-directory=$(BUILD_DIR) -jobname=$(AUTHOR)_Cover_Letter src/coverletter.tex
@@ -82,7 +82,7 @@ help:
 	@echo ""
 	@echo "Targets:"
 	@echo "  make init        - First-time setup (creates private config files)"
-	@echo "  make resume      - Build $(BUILD_DIR)/$(AUTHOR)_CV.pdf"
+	@echo "  make resume      - Build $(BUILD_DIR)/$(AUTHOR)_Resume.pdf"
 	@echo "  make coverletter - Build $(BUILD_DIR)/$(AUTHOR)_Cover_Letter.pdf"
 	@echo "  make all         - Build both"
 	@echo "  make clean       - Remove all build artifacts"
